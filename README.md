@@ -1,5 +1,5 @@
 <img src="https://github.com/GeorgiyDemo/FA/blob/img/fa.png" /> <img src="https://github.com/GeorgiyDemo/FA/blob/img/pmiit.png" width="85" height="85" />
-<img src="https://github.com/GeorgiyDemo/FA/blob/img/cat.jpg" align="right"/>
+<img src="https://avatars.mds.yandex.net/get-zen_doc/1866022/pub_5d7dae9b5eb26840a7fa9f6e_5d7db7cf32335400ab489e9b/scale_1200" align="right" width="300"/>
 
 ## Учебные материалы направления ПИ факультета ИТиАБД в ФУ при Правительстве РФ
 
@@ -14,7 +14,7 @@
 * [Финансы, деньги, кредит]() - пока пусто
 * [Экономическая политология]() - пока пусто
 * [Математика]() - пока пусто
-* [История]() - пока пусто
+* [История](https://github.com/TheZaychik/FA/tree/main/1%20Курс/История)
 
 ### Альтернативные репо
 * [GeorgiyDemo/FA](https://github.com/GeorgiyDemo/FA)
