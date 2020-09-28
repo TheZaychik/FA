@@ -9,12 +9,13 @@
 
 ### 1 Курс
 * [Алгоритмы и структуры данных в языке Python](https://github.com/TheZaychik/FA/tree/main/1%20Курс/АСД%20Python)
-* [Практикум по программированию]() - пока пусто
+* [Практикум по программированию](https://github.com/TheZaychik/FA/tree/main/1%20Курс/ПрактПрог)
 * [Организация вычислительных систем](https://github.com/TheZaychik/FA/tree/main/1%20Курс/ОВС)
 * [Финансы, деньги, кредит](https://github.com/TheZaychik/FA/tree/main/1%20Курс/ФДК)
 * [Экономическая политология]() - пока пусто
 * [Математика]() - пока пусто
 * [История](https://github.com/TheZaychik/FA/tree/main/1%20Курс/История)
+* [Английский язык](https://github.com/TheZaychik/FA/tree/main/1%20Курс/Английский)
 
 ### Альтернативные репо
 * [GeorgiyDemo/FA](https://github.com/GeorgiyDemo/FA)
