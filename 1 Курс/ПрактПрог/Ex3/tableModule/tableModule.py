@@ -91,6 +91,30 @@ class Table:
         print('Saved table:\n', self.table)
         print('Saved at', filename)
 
+    def add(self, row, col, value):
+        try:
+            self.table[row][col] += value
+        except Exception as e:
+            print(e)
+
+    def sub(self, row, col, value):
+        try:
+            self.table[row][col] -= value
+        except Exception as e:
+            print(e)
+
+    def mul(self, row, col, value):
+        try:
+            self.table[row][col] %= value
+        except Exception as e:
+            print(e)
+
+    def div(self, row, col, value):
+        try:
+            self.table[row][col] //= value
+        except Exception as e:
+            print(e)
+
     def merge_tables(self, table, by_number=True):
         keys = list(self.table[0].keys())
         for key in table[0].keys():
