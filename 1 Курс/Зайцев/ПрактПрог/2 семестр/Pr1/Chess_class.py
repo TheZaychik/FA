@@ -13,14 +13,14 @@ class Board():
 
     def board_show(self):
         print(
-            '\nP - Пешка; K - Король; Q - Королева; R - Ладья; N - Конь; B - Слон;\n    a  b  c  d  e  f  g  h\n  ┌────────────────────────┐')
+            '\nP(p) - Пешка; K(k) - Король; Q(q) - Королева; R(r) - Ладья; N(n) - Конь; B(b) - Слон;\n    A  B  C  D  E  F  G  H\n  ┌────────────────────────┐')
         for i in range(7, -1, -1):
             vuv = str(i + 1) + ' │'
             for k in range(8):
                 vuv += self.board[k][i]
             vuv += '│ ' + str(i + 1)
             print(vuv)
-        print('  └────────────────────────┘\n    a  b  c  d  e  f  g  h\n')
+        print('  └────────────────────────┘\n    A  B  C  D  E  F  G  H\n')
 
     def diagonal_attack(self, z, a, xm, ym, xpl, ypl, white_move, lub=False):
         k = []
@@ -202,7 +202,7 @@ class Board():
                         yp] != ' K '):
                 print('Нельзя есть свою фигуру')
             elif yp == yv and xv == xp:
-                print('Так и замерзнуть можно, не стойте на месте!')
+                print('Вы стоите на месте!')
             else:
                 el = self.board[xp][yp].lower()
 
@@ -358,7 +358,7 @@ class Board():
                             self.board[5][int(moves_count[i][1]) - 1] = ' . '
                     elif moves_count[i][4][3:] == 'p' or moves_count[i][4][3:] == 'P':
                         self.board[self.board_bv[moves_count[i - 1][2]]][int(moves_count[i - 1][3]) - 1] = \
-                        moves_count[i][4][3:]
+                            moves_count[i][4][3:]
                         self.board[self.board_bv[moves_count[i][0]]][int(moves_count[i][1]) - 1] = \
                             self.board[self.board_bv[moves_count[i][2]]][
                                 int(moves_count[i][3]) - 1]
@@ -391,46 +391,43 @@ class Board():
 command = ''
 
 while command != 'Конец':
-    command = input('Введите "Играть" для начала игры, "Конец" для окончания: ')
     board = Board()
     castling = [True, True, True, True, True, True]
     white_move = True
     moves_count = [0]
     move_number = -1
     repeat = True
-    if command == 'Играть':
-        while command != 'Выход':
-            if repeat == True:
-                board.board_show()
-                if white_move == True:
-                    print('Ход:', moves_count[0] + 1, 'Ходит белый.')
-                else:
-                    print('Ход:', moves_count[0] + 1, 'Ходит чёрный.')
-                print(
-                    'Введите координаты хода через пробел (латинские буквы поля откуда выполняется ход и куда. Для рокировки переместите короля на место ладьи), Выход')
+    while command != 'Выход':
+        if repeat:
+            board.board_show()
+            if white_move:
+                print('Ход:', moves_count[0] + 1, 'Ход белой стороны.')
             else:
-                if move_number % 2 == 0:
-                    print('Всего ходов: ' + str(moves_count[0] + 1) + ' Cейчас ' + str(
-                        move_number + 1) + ' ход. Белые\nВведите команду: Вперёд (кол-во ходов), Продолжить, Выход')
-                else:
-                    print('Всего ходов: ' + str(moves_count[0] + 1) + ' Cейчас ' + str(
-                        move_number + 1) + ' ход. Чёрные\nВведите команду: Вперёд (кол-во ходов), Продолжить, Выход')
+                print('Ход:', moves_count[0] + 1, 'Ход чёрной стороны.')
+            print(
+                'Введите координаты хода через пробел (латинские буквы поля откуда выполняется ход и куда. Для рокировки переместите короля на место ладьи), Выход')
+        else:
+            if move_number % 2 == 0:
+                print('Всего ходов: ' + str(moves_count[0] + 1) + ' Cейчас ' + str(
+                    move_number + 1) + ' ход. Ходят белые\nВведите ход:')
+            else:
+                print('Всего ходов: ' + str(moves_count[0] + 1) + ' Cейчас ' + str(
+                    move_number + 1) + ' ход. Ходят Черные\nВведите ход:')
 
-            command = input('Ввод: ')
-            if len(command) == 5 and command[2] == ' ' and repeat == True:
-                command = board.move_delay(command[0], command[1], command[3], command[4], white_move)
-                if command == 1:
-                    if white_move == True:
-                        white_move = False
-                    else:
-                        white_move = True
-                    moves_count[0] += 1
-                elif command == 2:
-                    print('Король умер, да здравствует король!')
-                    if white_move == True:
-                        print('Белые победили\n')
-                    else:
-                        print('Чёрные победили\n')
-                    command = 'Выход'
-            elif command != 'Выход':
-                print('Команда не распознана')
+        command = input('Ввод: ')
+        if len(command) == 5 and command[2] == ' ' and repeat == True:
+            command = board.move_delay(command[0], command[1], command[3], command[4], white_move)
+            if command == 1:
+                if white_move:
+                    white_move = False
+                else:
+                    white_move = True
+                moves_count[0] += 1
+            elif command == 2:
+                if white_move:
+                    print('Победа белых\n')
+                else:
+                    print('Победа черных\n')
+                command = 'Выход'
+        elif command != 'Выход':
+            print('Команда неизвестна')
