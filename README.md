@@ -3,13 +3,11 @@
 
 ## Учебные материалы направления ПИ факультета ИТиАБД в ФУ при Правительстве РФ
 
+В курсах найдете работы, они в фамильных папках. Так что некоторые практики делали разные студенты.
 
+Навигацию делать впадлу :(
 
-
-### 1 Курс Лекции
-* [Философия](https://docs.google.com/document/d/15TXJU_WLlCm71hlpFdKR-koHuCSxTu72ln1wBt1NKHE/edit?ts=6020e3c8)
+В принципе, там все понятно
 
 ### Альтернативные репо
-* [GeorgiyDemo/FA](https://github.com/GeorgiyDemo/FA)
-
 * [TheZaychik/KIP](https://github.com/TheZaychik/KIP) - репо КИПФИН aka [шорага.рф](https://шорага.рф)
