@@ -274,4 +274,31 @@ fabric.properties
 # https://plugins.jetbrains.com/plugin/12206-codestream
 .idea/codestream.xml
 
+
+# Created by https://www.toptal.com/developers/gitignore/api/microsoftoffice
+# Edit at https://www.toptal.com/developers/gitignore?templates=microsoftoffice
+
+### MicrosoftOffice ###
+*.tmp
+
+# Word temporary
+~$*.doc*
+
+# Word Auto Backup File
+Backup of *.doc*
+
+# Excel temporary
+~$*.xls*
+
+# Excel Backup File
+*.xlk
+
+# PowerPoint temporary
+~$*.ppt*
+
+# Visio autosave temporary files
+*.~vsd*
+
+# End of https://www.toptal.com/developers/gitignore/api/microsoftoffice
+
 # End of https://www.toptal.com/developers/gitignore/api/jetbrains
