@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Scoring</title>
+</head>
+<body>
+<form id="Scoring" action="http://localhost:555/hs/bank/send:" method="POST">
+<h1>Форма для заполнения</h1>
+<p><i>Заполните</i></p>
+<fieldset>
+    <legend>
+        Контактная информация
+        </legend>
+        <label for="name"> Фамилия Имя <em>*</em></label>
+        <input id="name" name="name" type="text" placeholder="Иванов Иван" required=""><br>
+        <label for="telephone"> Номер телефона</label>
+        <input id="telephone" name="telephone" type="text" placeholder="89901234353" required=""><br>
+        <label for="email"> Электронная почта</label>
+        <input id="email" name="email" type="text" placeholder="Почта@mail.ru" required=""><br>
+        
+    </fieldset>
+ 
+<fildset>
+<legend>
+    Данные для проверки
+</legend>
+<label for="gender">Пол</label>>
+<select name="gender" id="gender">
+    <option value="male"> Мужской</option>
+    
+    <option value="female"> Женский</option>
+</select><br>
+<label for="dateBirth">Дата рождения <em>*</em> </label>
+<input id="dateBirth" name="dateBirth" type="date" required="">
+<label for="periodLife"> Срок проживания</label>
+<input id="periodLife" name="periodLife" type="number" min="0" max="70" step="3">
+ 
+<label for="profession"> Профессия </label>
+<input type="text">
+<select name="profession" id="profession">
+    <option value="driver"> Водитель </option>
+    <option value="policeman"> Полицейский </option>
+    
+</select> <br>
+<label for="sphere">Сфера деятельности</label>
+<select name = "sphere" id= "sphere">
+    <option value="public"></option>
+</select>
+<br>
+<label for="periodWork"> Срок работы <em>*</em></label>
+<input id="periodWork" name="periodWork" type="number" min="0" max="50" step="3" required>
+ <br>
+ <label for="bankAccount"> Наличие банковского счета</label>
+ <input type="checkbox" name = "bankAccount" id="bankAccount">
+ <br>
+
+ <label for="realEstate"> Наличие недвижимости</label>
+ <input type="checkbox" name = "realEstate" id="realEstate">
+ <br>
+
+ <label for="insurancePolicy"> Наличие страховки</label>
+ <input type="checkbox" name = "insurancePolicy" id="insurancePolicy">
+ <br>
+
+ <input type="submit" value="Отправить">
+</fildset>
+</form> 
+</body>
+</html>
