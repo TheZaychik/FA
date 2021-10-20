@@ -4,27 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width, initial-scale=1.0">
-    <link rel="stylesheet" href="style1.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <title>Scoring</title>
 </head>
 <body>
+    <div class="px-4 py-5 my-5 text-center">
+          <h1 class="display-5 fw-bold">Форма для заполнения</h1>
+        <div class="col-lg-6 mx-auto">
+          
+          
+            <p><i>Заполните</i></p>
+            <fieldset style="margin-left: auto; margin-right: auto; margin-bottom: 10px;">
+                <legend>
+                    Контактная информация
+                    </legend>
+                    <div class="form-floating mb-3">
+                        <input id="name" class="form-control"  name="name" type="text" placeholder="Иванов Иван" required=""><br>
+                        <label for="name"> Фамилия Имя <em>*</em></label>
+                      </div>
+                    <label for="name"> Фамилия Имя <em>*</em></label>
+                    <label for="telephone"> Номер телефона</label>
+                    <input id="telephone" name="telephone" type="text" placeholder="89901234353" required=""><br>
+                    <label for="email"> Электронная почта</label>
+                    <input id="email" name="email" type="text" placeholder="Почта@mail.ru" required=""><br>
+                    
+                </fieldset>
+             
+          
+        </div>
+      </div>
 <form id="Scoring" action="http://localhost:443/hs/bank/send" method="POST">
-<h1>Форма для заполнения</h1>
-<div id="rec" class="block-border">
-<p><i style="text-align: center; padding-left: 180px; font-size:18px">Заполните</i></p>
-<fieldset style="margin-left: auto; margin-right: auto; margin-bottom: 10px;">
-    <legend>
-        Контактная информация
-        </legend>
-        <label for="name"> Фамилия Имя <em>*</em></label>
-        <input id="name" name="name" type="text" placeholder="Иванов Иван" required=""><br>
-        <label for="telephone"> Номер телефона</label>
-        <input id="telephone" name="telephone" type="text" placeholder="89901234353" required=""><br>
-        <label for="email"> Электронная почта</label>
-        <input id="email" name="email" type="text" placeholder="Почта@mail.ru" required=""><br>
-        
-    </fieldset>
- 
+
 <fildset>
 <legend style="text-align: center; padding-left:30px; font-size:22px">
     Данные для проверки
@@ -76,8 +86,9 @@ syle="padding-top: 10px;">Сфера деятельности
 </label>
  <br>
 </div>
-<div style="margin-left: 600px; margin-top: 10px; display: inline-block;">
- <input type="submit" value="Отправить">
+
+<div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+    <input type="button" value="Отправить" class="btn btn-primary btn-lg px-4 gap-3">
 </div>
 </fildset>
 </form> 
