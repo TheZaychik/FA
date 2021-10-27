@@ -1,0 +1,1 @@
+ROOT_DIR = '/Users/nikitazaytsev/git/FA/2 Курс/Зайцев/PractProg/pract4'
