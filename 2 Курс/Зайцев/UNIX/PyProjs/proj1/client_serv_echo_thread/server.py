@@ -17,7 +17,7 @@ sock.bind(('', props.PORT))
 sock.listen(5)
 
 
-def client_serve(conn):
+def client_serve(conn, addr):
     creds = json.loads(conn.recv(1024).decode('UTF-8'))
     if creds['login'] == LOGIN and creds['passwd'] == PASSWD:
         logger.info(f' User {LOGIN} login on {datetime.now()}')
@@ -42,7 +42,7 @@ def client_serve(conn):
 while True:
     conn, addr = sock.accept()
     print('accepted')
-    t = threading.Thread(target=client_serve(conn))
+    t = threading.Thread(target=client_serve, args=[conn, addr])
     t.start()
     print('created')
 
