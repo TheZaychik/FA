@@ -1,0 +1,117 @@
+body {
+    font-family: "Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji" !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    color: #24292f !important;
+    background-color: white !important;
+}
+
+.navbar-customclass {
+    background-color: #24292E;
+}
+
+.navbar-customclass .navbar-nav .nav-link {
+    color: white;
+}
+
+.navbar-customclass .nav-item.active .nav-link,
+.navbar-customclass .nav-item:hover .nav-link {
+    color: rgba(255,255,255,.6);
+}
+
+.join {
+    margin-top: 2%;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 600 !important;
+    font-size: 32px !important;
+}
+
+p {
+    margin-top: 3% !important;
+}
+
+.text_1 {
+    margin-bottom: 64px;
+}
+
+.verify {
+    border: 1px solid #dddddd;
+    height: 300px;
+    width: 300px;
+}
+
+#all_input {
+    width: 440px;
+    max-width: 100%;
+    margin-right: 5px;
+    background-color: #f6f8fa;
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+    padding: 5px 12px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #24292f;
+    vertical-align: middle;
+    background-color: #f6f8fa;
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    outline: none;
+    margin-top: -2%;
+}
+
+.author {
+    font-size: 12px !important;
+}
+
+.line {
+    background-color: grey;
+    margin-bottom: 1%;
+    border: none;
+}
+
+#text_2 {
+    display: inline;
+    font-size: 12px !important;
+}
+
+#text_3{
+    display: inline;
+    padding-left: 8%;
+}
+
+ul.first a {
+    text-decoration: none;
+    font-size: 12px !important;
+}
+
+#icon {
+    width: 1%;
+    margin-top: -1%;
+}
+
+.footer a {
+    display: inline;
+    padding-left: 4.4%;
+    text-decoration: none;
+    font-size: 12px !important;
+}
+
+.hub {
+    font-size: 12px !important;
+}
+
+.make {
+    font-size: 12px;
+}
+
+#btn_1 {
+    width: 87%;
+}
