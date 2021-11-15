@@ -24,6 +24,8 @@ body {
     font-size: 14px;
     line-height: 1.5;
     text-align: center;
+    color:rgb(85, 83, 83);
+    margin-bottom: -1%;
 }
 
 h1 {
@@ -33,7 +35,8 @@ h1 {
 }
 
 p {
-    margin-top: 3% !important;
+    margin-top: 6% !important;
+    font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace !important;
 }
 
 .text_1 {
@@ -77,32 +80,19 @@ p {
     border: none;
 }
 
-#text_2 {
-    display: inline;
-    font-size: 12px !important;
-}
-
-#text_3{
-    display: inline;
-    padding-left: 8%;
-}
 
 ul.first a {
     text-decoration: none;
     font-size: 12px !important;
 }
 
-#icon {
-    width: 1%;
-    margin-top: -1%;
-}
 
-.footer a {
+/*.footer a {
     display: inline;
     padding-left: 4.4%;
     text-decoration: none;
     font-size: 12px !important;
-}
+}*/
 
 .hub {
     font-size: 12px !important;
@@ -110,8 +100,10 @@ ul.first a {
 
 .make {
     font-size: 12px;
+
+    color:rgb(85, 83, 83);
 }
 
-#btn_1 {
+#create_acc {
     width: 87%;
 }
