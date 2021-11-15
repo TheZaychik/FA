@@ -20,7 +20,7 @@ sock.listen(5)
 def client_serve(conn, addr):
     creds = json.loads(conn.recv(1024).decode('UTF-8'))
     if creds['login'] == LOGIN and creds['passwd'] == PASSWD:
-        logger.info(f' User {LOGIN} login on {datetime.now()}')
+        logger.info(f' User {creds["login"]} login on {datetime.now()}')
         conn.send(bytes('OK'.encode()))
     else:
         conn.close()
