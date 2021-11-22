@@ -118,42 +118,45 @@ class FileManager:
 
     def main(self):
         while True:
-            print('Директория:', os.path, '\n------------------------')
-            self.show_dir()
-            print('\n------------------------\n'
-                  'Команды:\n1. Создать папку\n2. Удалить папку\n3. Переход по папкам\n4. Создать файл\n'
-                  '5. Записать текст в файл\n6. Чтение из файла\n7. Удалить файл\n8. Скопировать файл\n'
-                  '9. Переместить файл\n10. Переименовать файл\n11. Создать архив\n12. Разархивировать файл\n'
-                  '13. Выход')
-            cmd = input()
-            if cmd == '1':
-                self.create_dir()
-            elif cmd == '2':
-                self.delete_dir()
-            elif cmd == '3':
-                self.change_dir()
-            elif cmd == '4':
-                self.create_file()
-            elif cmd == '5':
-                self.write_file()
-            elif cmd == '6':
-                self.read_file()
-            elif cmd == '7':
-                self.delete_file()
-            elif cmd == '8':
-                self.copy_file()
-            elif cmd == '9':
-                self.move_file()
-            elif cmd == '10':
-                self.rename_file()
-            elif cmd == '11':
-                self.create_zip()
-            elif cmd == '12':
-                self.unpack_zip()
-            elif cmd == '13':
-                break
-            else:
-                print('Неверная команда!')
+            try:
+                print('Директория:', os.path, '\n------------------------')
+                self.show_dir()
+                print('\n------------------------\n'
+                      'Команды:\n1. Создать папку\n2. Удалить папку\n3. Переход по папкам\n4. Создать файл\n'
+                      '5. Записать текст в файл\n6. Чтение из файла\n7. Удалить файл\n8. Скопировать файл\n'
+                      '9. Переместить файл\n10. Переименовать файл\n11. Создать архив\n12. Разархивировать файл\n'
+                      '13. Выход')
+                cmd = input()
+                if cmd == '1':
+                    self.create_dir()
+                elif cmd == '2':
+                    self.delete_dir()
+                elif cmd == '3':
+                    self.change_dir()
+                elif cmd == '4':
+                    self.create_file()
+                elif cmd == '5':
+                    self.write_file()
+                elif cmd == '6':
+                    self.read_file()
+                elif cmd == '7':
+                    self.delete_file()
+                elif cmd == '8':
+                    self.copy_file()
+                elif cmd == '9':
+                    self.move_file()
+                elif cmd == '10':
+                    self.rename_file()
+                elif cmd == '11':
+                    self.create_zip()
+                elif cmd == '12':
+                    self.unpack_zip()
+                elif cmd == '13':
+                    break
+                else:
+                    print('Неверная команда!')
+            except Exception as e:
+                print(e)
 
 
 if __name__ == '__main__':
