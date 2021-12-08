@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ButtonClicker</string>
+    <string name="click_me">Прибавить</string>
+
+    <string name="click_me_del">Удалить</string>
+
+    <string name="click_me_dec">Уменьшить</string>
+</resources>

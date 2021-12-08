@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Угадайка</string>
+    <string name="guess">Введите число</string>
+    <string name="behind">Слишком мало</string>
+    <string name="ahead">Слишком много</string>
+    <string name="hit">Поздравляю, Вы угадали!</string>
+    <string name="input_value">Введите число</string>
+    <string name="play_more">Сыграйте еще раз</string>
+    <string name="try_to_guess">Угадайте число (1 &#8211; 100)</string>
+    <string name="error">Ошибка ввода! Введите число снова</string>
+    <string name="error_empty">Поле ввода пустое! Введите число от 1 до 100</string>
+
+</resources>
