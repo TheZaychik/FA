@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>Scoring</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark" aria-label="Third navbar example">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Навигация</a>
+         
+          <div class="collapse navbar-collapse" id="navbarsExample03">
+            <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Главная</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#down">Подвал страницы</a>
+              </li>
+            </ul>
+            <form>
+              <input class="form-control" type="text" placeholder="Поиск" aria-label="Search">
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <div class="row row-cols-3 mx-auto">
+        <div class="col-md-4"></div>
+
+        <div class="col-md-4">
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="1.jpg" width="800" height="600">
+          </div>
+          <div class="carousel-item">
+            <img src="2.jpg" width="800" height="600">
+          </div>
+          <div class="carousel-item">
+            <img src="3.jpg" width="800" height="600">
+          </div>
+          <div class="carousel-item">
+            <img src="4.jpg" width="800" height="600">
+          </div>
+          <div class="carousel-item">
+            <img src="5.jpg" width="800" height="600">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Предыдущий</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Следующий</span>
+        </button>
+      </div>
+
+    </div>
+      <div class="col-md-5"></div>
+    </div>
+
+
+    <div class="px-4 py-5 my-5 text-center">
+          <h1 class="display-5 fw-bold">Форма</h1>
+        <div class="col-lg-6 mx-auto">
+          
+          
+            <p><i>обязательно к заполнению</i></p>
+            <fieldset style="margin-left: auto; margin-right: auto; margin-bottom: 10px;">
+                <legend>
+                    Контактная информация
+                    </legend>
+                    <div class="form-floating mb-3">
+                        <input id="name" class="form-control"  name="name" type="text" placeholder="Иванов Иван" required=""><br>
+                        <label for="name"> Фамилия Имя <em>*</em></label>
+                      </div>
+                    <label for="telephone"> Номер телефона <em>*</em></label>
+                    <input id="telephone" name="telephone" type="text" placeholder="+7 999 123 45 67" required=""><br>
+                    <label for="email"> Электронная почта</label>
+                    <input id="email" name="email" type="text" placeholder="Пример@yandex.ru" required=""><br>
+                    
+                </fieldset>
+             
+          
+        </div>
+      </div>
+<form id="Scoring" action="http://localhost:443/hs/bank/send" method="POST">
+    <form class="needs-validation " novalidate="">
+        <legend style="text-align: center;">
+            Контактная информация
+            </legend>
+        <div class="row g-3 text-center">
+            <div class="col"></div>
+            <div class="col-sm-2">
+                <label for="gender">Пол</label>
+                <select name="gender" id="gender">
+                    <option value="male"> Мужской</option>
+                    
+                    <option value="female"> Женский</option>
+                </select><br>
+              </div>
+    
+              <div class="col-sm-3">
+                <label for="dateBirth">Дата рождения <em>*</em> </label>
+                <input id="dateBirth" name="dateBirth" type="date" required="">
+              </div>
+            
+              <div class="col"></div>
+
+        
+        <div class="row g-3 text-center">
+            <div class="col-md-1"></div>
+          <div class="col-md-4">
+            <label for="profession" class="form-label"> Последняя должность/профессия </label>
+            <input type="text">
+          </div>
+
+          <div class="col-md-6">
+            <label for="sphere" class="form-label" syle="padding-top: 10px;">Желаемая должность/профессия
+            </label>
+            <input type="text">
+          </div>
+
+            <div class="col-md-1"></div>
+        </div>
+
+        <div class="row row-cols-3"> 
+
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+            <div class="form-check text-center">
+               
+                <label for="insurancePolicy"> Наличие медкнижки
+                    <input type="checkbox" name = "insurancePolicy" id="insurancePolicy">
+                </label>
+            </div>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+
+        <div class="row row-cols-3"> 
+
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+            <div class="form-check text-center">
+                <label for="bankAccount"> Наличие трудовой книжки
+                    <input type="checkbox" name = "bankAccount" id="bankAccount">
+                   </label> 
+            </div>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+        <div class="row row-cols-3"> 
+
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+            <div class="form-check text-center">
+                <label for="realEstate"> Наличие судимостей
+                    <input type="checkbox" name = "realEstate" id="realEstate">
+                   </label>
+            </div>
+            </div>
+            <div class="col-md-1"></div>
+
+        </div>
+            <div class="row row">
+                <div class="col-md-3"></div>
+              <div class="col-md-3 float-md-right">
+                <label for="periodLife">Сколько Вы хотите зарабатывать?</label>
+                <input id="periodLife" name="periodLife" type="number" min="0" max="70" step="1">
+ 
+              </div>
+    
+              <div class="col-md-3 text-left">
+                <label for="periodWork"> Сколько лет Вы отработали на прошлом месте работы? <em>*</em></label>
+                    <input id="periodWork" name="periodWork" type="number" min="0" max="50" step="3" required>
+                     
+              </div>
+    
+              <div class="col-md-3"></div>
+            </div>
+       </form>
+<fildset>
+<div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+    <input type="button" value="Отправить" class="btn btn-primary btn-lg px-4 gap-3">
+</div>
+</fildset>
+</form> 
+
+<p id = "down"></p>
+</body>
+</html>
