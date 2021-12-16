@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 10%;
+            margin: 0;
+            background-color: rgb(68, 112, 150);
+        }
+        table{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-bottom: 20;
+        }
+        input.button24{
+            font-weight: 700;
+            color: white;
+            border-radius: 3px;
+            background-color: violet;
+            transition: 0.2s;
+        }
+        input.button24:hover{background: linear-gradient(yellow,orange)green;}
+        input.button24:active{background: linear-gradient(blue,rgb(87, 87, 138)),purple;}
+        caption{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif,cursive;
+            font-weight: bold;
+            font-size: 2em;
+            padding: 10px;
+            color: #f3CD26;
+            text-shadow: 1px 1px 0 rgba(0, 0, 0, 3);
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function sendEvent(eventName,eventparams){
+            let newEvent = new MouseEvent('click');
+            newEvent.eventData1C = {event: eventName, params: eventparams};
+            return dispatchEvent(newEvent);
+        }
+        function showMessage(){
+            return sendEvent('showMessage',message)
+        }
+    </script>    
+    <table border="1" cellspacing="0" cellpadding="3">
+       <caption>Курсы валют в рублях</caption>
+        <thead>
+            <tr>
+                <th rowspan="2">
+                    Валюты
+                </th>
+                <th colspan="3">Курсы
+
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    Вчера
+                </th>
+                <th>Сегодня
+                    
+                </th>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr>
+                <td>Доллар США</td>
+                <td>73.1234</td>
+                <td>72.1234</td>
+            </tr>
+            <tr>
+                <td>Евро</td>
+                <td>73.1234</td>
+                <td>72.1234</td>
+            </tr>
+            <tr>
+                <td>Швейцарский франк</td>
+                <td>73.1234</td>
+                <td>72.1234</td>
+            </tr>
+            <tr>
+                <td>Японская иена</td>
+                <td>73.1234</td>
+                <td>72.1234</td>
+            </tr>
+            <tr>
+                <td>Китайский юань</td>
+                <td>73.1234</td>
+                <td>72.1234</td>
+            </tr>
+            <tr>
+                <td>Австралийский доллар</td>
+                <td>73.1234</td>
+                <td>72.1234</td>
+            </tr>
+        </tbody>
+    </table>
+    <input type="button" class = "button24" onclick="showNessage" value="Вывести средний курс">
+</body>
+</html>
+<!--взять в двойные кавычки, заменить двойные на одинарные,превратить в строку. Дописываем. Соединение = Новый HTTPСоединения("www.cbr-xml-daily.ru",443,,,,,Новый ЗащещенноеСоединениеOpenSSL); Запрос = Новый HTTPЗапрос("/daily_json.js"); Ответ = СоединениеПолучить(Запрос); Рез=Ответ.ПолучитьТелоКакСтроку() Чтение = Новый ЧтениеJSON; Чтение.УстановитьСтроку(Рез); СтруктураКурсов = ПрочитатьJSON(Чтение, Ложь); Чтение.Закрыть. Достать из обработчика выражений ссылку на данные и подставить в курсы ---- "+СтруктураКурсов.Valute.USD.Value+"-->
+<!-- -->
