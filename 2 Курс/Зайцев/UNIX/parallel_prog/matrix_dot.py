@@ -6,7 +6,7 @@ import filelock
 # import numpy as np
 
 SIZE = 10
-FILE = "../parallel_prog/matrix.txt"
+FILE = "matrix.txt"
 
 
 def zeroes(n, m):
@@ -36,7 +36,7 @@ def time_it(func):
     def wrapper(*args, **kwargs):
         start = time.time()
         result = func(*args, **kwargs)
-#        print(f"{func.__name__}:", time.time() - start)
+        print(f"{func.__name__}:", time.time() - start)
         return result
 
     return wrapper

@@ -34,6 +34,7 @@ while True:
         conn.close()
         break
     else:
+        print(f'{data}')
         conn.send(data.upper())
 
 sock.close()
