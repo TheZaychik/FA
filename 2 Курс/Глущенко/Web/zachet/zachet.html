@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>Зачетое задание Вариант 3</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark" aria-label="Third navbar example">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Навигация navbar</a>
+         
+          <div class="collapse navbar-collapse" id="navbarsExample03">
+            <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#down">Вниз страницы</a>
+              </li>
+            </ul>
+            <form>
+              <input class="form-control" type="text" placeholder="Поиск по странице" aria-label="Search">
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="col-md-5"></div>
+    </div>
+
+
+    <div class="px-2 py-2 my-2 text-center">
+          <h1 class="display-5 fw-bold">Зачетная работа Блок 1</h1>
+        <div class="col-lg-6 mx-auto">
+        </div>
+    </div>
+      
+        <div class="row row-cols-2py-2 my-2 text-center">
+          <div class="col-md-5">
+            <label for="years"> Введите количество лет</label>
+            <input id="years" name="years" type="text" placeholder="9" required=""><br>
+           </div>
+
+          <div class="col-md-7">
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center text-right" style="margin-right: -500px;">
+                <input type="button" onclick='summaproc(document.getElementById("bank").value,document.getElementById("vklad").value,Number(document.getElementById("years").value),document.getElementById("save").checked)' value="Send" class="btn btn-primary btn-lg px-4 gap-3" style="width:12%">
+            </div>
+           </div>
+        </div>
+        <div class="row row-cols-2 py-2 my-2">
+            <div class="col-md-6 text-left" style="margin-left: 40px;">
+              <label for="bank" class="form-label" syle="padding-top: 10px; width:100px">Выберите банк</label>
+              <input type="text" syle="padding-top: 10px;">
+                  <select name = "bank" id= "bank" class="form-select" style="width:60%">
+                      <option value="vtb">ВТБ</option>
+                      <option value="sber">СберБанк</option>
+                      <option value="alfa">Альфа-Банк</option>
+                  </select>
+            </div>
+                <div class="col-md-8"></div>
+          </div>
+          <div class="row row-cols-2 py-2 my-2">
+            <div class="col-md-6 text-left" style="margin-left: 40px;">
+              <label for="bank" class="form-label" syle="padding-top: 10px; width:30%">Выберите сумму вклада</label>
+              <input type="text" syle="padding-top: 10px;">
+                  <select name = "vklad" id= "vklad" class="form-select" style="width:60%">
+                      <option value="thous50">50000</option>
+                      <option value="thous100">100000</option>
+                      <option value="thous200">200000</option>
+                  </select>
+            </div>
+                <div class="col-md-8"></div>
+          </div>
+        <div class="row row-cols-1">
+            <div class="col-md-12">
+                <p></p>
+            </div>
+        </div>
+        <div class="row row-cols-1">
+            <div class="col-md-12">
+                <p></p>
+            </div>
+        </div><div class="row row-cols-1">
+            <div class="col-md-12">
+                <p></p>
+            </div>
+        </div><div class="row row-cols-1">
+            <div class="col-md-12">
+                <p></p>
+            </div>
+        </div><div class="row row-cols-1">
+            <div class="col-md-12">
+                <p></p>
+            </div>
+        </div><div class="row row-cols-1">
+            <div class="col-md-12">
+                <p></p>
+            </div>
+        </div><div class="row row-cols-1">
+            <div class="col-md-12">
+                <p></p>
+            </div>
+        </div><div class="row row-cols-1">
+            <div class="col-md-12">
+                <p></p>
+            </div>
+        </div><div class="row row-cols-1">
+            <div class="col-md-12">
+                <p></p>
+            </div>
+        </div><div class="row row-cols-1">
+            <div class="col-md-12">
+                <p></p>
+            </div>
+        </div><div class="row row-cols-1">
+            <div class="col-md-12">
+                <p></p>
+            </div>
+        </div><div class="row row-cols-1">
+            <div class="col-md-12">
+                <p></p>
+            </div>
+        </div>
+
+
+       
+
+        <div class="row row-cols-2"> 
+
+            <div class="col-md-5 text-left">
+            <div class="form-check text-left" style="margin-left: 4%;">
+                <label for="save"> Включен / выключен -> alert/LocalStorage
+                    <input type="checkbox" name = "bankAccount" id="save">
+                   </label> 
+            </div>
+            </div>
+            <div class="col-md-7"></div>
+        </div>
+    
+<p id = "down"></p>
+<script>
+    var vtb = new Map()
+    vtb.set("thous50",0.02);
+    var sber = new Map()
+    sber.set("thous50",0.01);
+    var slovarznach={
+        vtb:{
+
+            thous50:1.02,
+            thous100:1.03,
+            thous200:1.04
+        },
+
+        sber:{
+
+            thous50:1.01,
+            thous100:1.02,
+            thous200:1.03
+        },
+
+        alfa:{
+
+            thous50:1.04,
+            thous100:1.05,
+            thous200:1.06,
+        }
+    }
+    function summaproc(bank,vklad,years,save){
+        var itog=0
+        if (vklad=="thous50"){
+                itog=50000
+            }
+            else if (vklad=="thous100"){
+                itog=100000
+            }
+            else if (vklad=="thous200"){
+                itog=20000
+            }
+        for (var i=0;i<years;i++){
+            if (vklad=="thous50"){
+                if (bank=="sber"){
+                    itog*=slovarznach.sber.thous50
+                }
+                else if (bank=="vtb"){
+                    itog*=slovarznach.vtb.thous50
+                }
+                else if (bank=="alfa"){
+                    itog*=slovarznach.alfa.thous50
+                }
+            }
+            else if (vklad=="thous100"){
+                if (bank=="sber"){
+                    itog*=slovarznach.sber.thous100
+                }
+                else if (bank=="vtb"){
+                    itog*=slovarznach.vtb.thous100
+                }
+                else if (bank=="alfa"){
+                    itog*=slovarznach.alfa.thous100
+                }
+            }
+            else if (vklad=="thous200"){
+                if (bank=="sber"){
+                    itog*=slovarznach.sber.thous200
+                }
+                else if (bank=="vtb"){
+                    itog*=slovarznach.vtb.thous200
+                }
+                else if (bank=="alfa"){
+                    itog*=slovarznach.alfa.thous200
+                }
+            }
+        }
+        if (save){
+        alert(itog.toFixed(2))
+        }
+        else{
+            localStorage.setItem("summaProc",itog.toFixed(2));
+            alert("Сохранено в localStorage");
+            alert(localStorage.getItem("summaProc"))
+        }
+    }
+</script>
+</body>
+</html>
