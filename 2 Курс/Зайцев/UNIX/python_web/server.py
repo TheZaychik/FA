@@ -6,7 +6,7 @@ import socket
 class BrowserRequest():
 
     def __init__(self, data: bytes):
-        lines = [d.strip() for d in data.decode('utf8','replace').split("\n") if d.strip()]
+        lines = [d.strip() for d in data.decode('utf8', 'replace').split("\n") if d.strip()]
 
         # First line takes the form of
         # GET /file/path/ HTTP/1.1
