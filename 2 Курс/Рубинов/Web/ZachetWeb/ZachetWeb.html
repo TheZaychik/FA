@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zachet</title>
+</head>
+<body>
+    <script src="ZachetWeb.js"></script>
+    <select id="sel1" name="bn" onchange="fun1()" >
+        <option disabled>Выберите Банк</option>
+        <option value="VTB">Втб</option>
+        <option value="SBER">Сбер</option>
+        <option value="ALPHA">ALPHA</option>
+        <option value="TINK">Тинькоф</option>
+        <option value="IND">Индустриальный</option>
+    </select>
+    </br>
+    <input id="tyx" type="text" name="tx" size="40" value="0"></br>
+
+    <input type="radio" name="viv" value="alert" checked> Alert<Br>
+    <input type="radio" name="viv" value="local"> localstorage<Br>
+
+    <button onclick="main()">  Вычислить </button>
+    
+</body>
+</html>
