@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Подключаем API -->
+    <!-- Подробнее https://tech.yandex.ru/maps/doc/jsapi/2.1/dg/concepts/load-docpage/ -->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=3d688074-39a4-429c-abfc-b69ced3f264c" type="text/javascript"></script>
+    <script scr="http://yandex.st/jquerry/2.2.3/jquerry.min.js"></script>
+    <style>
+        html {height: 100%;}
+        body{width: 100%; margin: 0; padding:0;}
+    </style>
+</head>
+<body width: 100%; margin: 0; padding:0;>
+
+<!-- Создаём контейнер для карты -->
+<div id="map" style="width: 600px; height: 400px"></div>
+
+<!-- Создаём карту -->
+<script type="text/javascript">
+    let myMap;
+    let MyRoute;
+    // Функция ymaps.ready() будет вызвана, когда
+    // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+    ymaps.ready(init);
+
+    function init() {
+        // Создание карты.
+        // https://tech.yandex.ru/maps/doc/jsapi/2.1/dg/concepts/map-docpage/
+        var myMap = new ymaps.Map("map", {
+            // Координаты центра карты.
+            // Порядок по умолчнию: «широта, долгота».
+            center: [55.76, 37.64],
+            // Уровень масштабирования. Допустимые значения:
+            // от 0 (весь мир) до 19.
+            zoom: 12,
+            // Элементы управления
+            // https://tech.yandex.ru/maps/doc/jsapi/2.1/dg/concepts/controls/standard-docpage/
+            controls: [
+
+                'zoomControl', // Ползунок масштаба
+                'rulerControl', // Линейка
+                'routeButtonControl', // Панель маршрутизации
+                'trafficControl', // Пробки
+                'typeSelector', // Переключатель слоев карты
+                'fullscreenControl', // Полноэкранный режим
+
+                // Поисковая строка
+                new ymaps.control.SearchControl({
+                    options: {
+                        // вид - поисковая строка
+                        size: 'large',
+                        // Включим возможность искать не только топонимы, но и организации.
+                        provider: 'yandex#search'
+                    }
+                })
+
+            ]
+        });
+
+        // Добавление метки
+        // https://tech.yandex.ru/maps/doc/jsapi/2.1/ref/reference/Placemark-docpage/
+        var myPlacemark = new ymaps.Placemark([55.76, 37.64], {
+            // Хинт показывается при наведении мышкой на иконку метки.
+            hintContent: 'Содержимое всплывающей подсказки',
+            // Балун откроется при клике по метке.
+            balloonContent: 'Содержимое балуна'
+        });
+
+        // После того как метка была создана, добавляем её на карту.
+        myMap.geoObjects.add(myPlacemark);
+        function carRoute(addres1,addres2){
+            myRoute = new ymaps.multiRouter.multiRoute({
+                referencePoints:[addres1,addres2]
+            },{
+                boundsAitoApply: true
+            });
+            myRoute.model.setParams({avoidTrafficJams: true},true);
+            myMap.geoObjects.add(myRoute)
+        }
+        function clearMap(){
+            myMap.geoObjects.removeAll();
+            myRoute && myMap.geoObjects.remove(myRoute);
+        }
+    }
+</script>
+
+</body>
+</html>

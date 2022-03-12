@@ -1,0 +1,29 @@
+.d-grid{
+    margin-right: -500px;
+}
+.btn{
+    width:12%
+}
+.vklad{
+    margin-left: 40px;
+    padding-top: 5px;
+    padding-bottom: 5px;    
+}
+.form-select{
+    width:60%;
+}
+.lf{
+    margin-left: 40px;
+}
+.lfinp{
+    margin-left: 31%;
+    width:75%
+}
+.lfbank{
+    margin-left: 40px;
+    padding-top: 10px;
+     width:100
+}
+.lfcheck{
+    margin-left: 4%;
+}

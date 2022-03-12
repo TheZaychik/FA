@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <title>Scoring</title>
+</head>
+<body>
+<form id="Scoring" action="http://localhost:443/hs/bank/send" method="POST">
+<h1>Форма для заполнения</h1>
+<div id="rec" class="block-border">
+<p><i style="text-align: center; padding-left: 180px; font-size:18px">Заполните</i></p>
+<fieldset style="margin-left: auto; margin-right: auto; margin-bottom: 10px;">
+    <legend>
+        Контактная информация
+        </legend>
+        <label for="name"> Фамилия Имя <em>*</em></label>
+        <input id="name" name="name" type="text" placeholder="Иванов Иван" required=""><br>
+        <label for="telephone"> Номер телефона</label>
+        <input id="telephone" name="telephone" type="text" placeholder="89901234353" required=""><br>
+        <label for="email"> Электронная почта</label>
+        <input id="email" name="email" type="text" placeholder="Почта@mail.ru" required=""><br>
+        
+    </fieldset>
+ 
+<fildset>
+<legend style="text-align: center; padding-left:30px; font-size:22px">
+    Данные для проверки
+</legend>
+<label for="gender">Пол</label>
+<select name="gender" id="gender">
+    <option value="male"> Мужской</option>
+    
+    <option value="female"> Женский</option>
+</select><br>
+<label for="dateBirth">Дата рождения <em>*</em> </label>
+<input id="dateBirth" name="dateBirth" type="date" required="">
+<label for="periodLife"> Срок проживания</label>
+<input id="periodLife" name="periodLife" type="number" min="0" max="70" step="3">
+ 
+<label for="profession"> Профессия </label>
+<input type="text">
+<select name="profession" id="profession" style="margin-bottom: 10px; display: run-in;">
+    <option value="driver"> Водитель </option>
+    <option value="policeman"> Полицейский </option>
+    
+</select> <br>
+</div>
+<br>
+<div id="rec1" class="label1">
+<label for="sphere" 
+syle="padding-top: 10px;">Сфера деятельности
+<select name = "sphere" id= "sphere">
+    <option value="public">Финансист</option>
+    <option value="public">Юрист</option>
+</select>
+</label>
+<br>
+<label for="periodWork"> Срок работы <em>*</em>
+<input id="periodWork" name="periodWork" type="number" min="0" max="50" step="3" required></label>
+ <br>
+ <label for="bankAccount"> Наличие банковского счета
+ <input type="checkbox" name = "bankAccount" id="bankAccount">
+</label>
+ <br>
+
+ <label for="realEstate"> Наличие недвижимости
+ <input type="checkbox" name = "realEstate" id="realEstate">
+</label>
+ <br>
+
+ <label for="insurancePolicy"> Наличие страховки
+ <input type="checkbox" name = "insurancePolicy" id="insurancePolicy">
+</label>
+ <br>
+</div>
+<div style="margin-left: 600px; margin-top: 10px; display: inline-block;">
+ <input type="submit" value="Отправить">
+</div>
+</fildset>
+</form> 
+</body>
+</html>

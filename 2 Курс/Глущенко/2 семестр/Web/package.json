@@ -1,0 +1,14 @@
+{
+  "name": "NLP-preprocessor-API",
+  "version": "1.0.0",
+  "description": "An API that pre-process text to NLP tasks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/index.js",
+    "test":"jest"
+  },
+  "keywords": ["api", "nlp", "preprocess"],
+  "author": "Glushchenko",
+  "license": "ISC"
+}
