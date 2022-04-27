@@ -35,4 +35,3 @@ app.route('/products')
 
 
 app.listen(port, () => console.log(`Прослушивание на порту ${port}!`))
-  
