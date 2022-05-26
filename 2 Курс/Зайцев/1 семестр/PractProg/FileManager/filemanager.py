@@ -41,7 +41,7 @@ class FileManager:
         print('Введите название файла')
         filename = input()
         f = open(f'{os.path}/{filename}', 'w')
-        f.close()
+            
 
     def read_file(self):
         print('Введите название файла для чтения')
