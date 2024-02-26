@@ -1,4 +1,4 @@
-#include "/usr/local/opt/libomp/include/omp.h"
+#include <omp.h>
 #include <iostream>
 #include <stdio.h>
 #include <locale>
