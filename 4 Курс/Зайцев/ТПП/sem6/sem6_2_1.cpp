@@ -81,7 +81,7 @@ int main(int argc, char *argv[]) {
 	list = head_list;
 	while (list != NULL)  // Вывод элементов списка и освобождение памяти
 	{
-		printf("%d : %d\n", list->number, list->fib_number);
+		printf("%d : %lu\n", list->number, list->fib_number);
 		temp = list->next;
 		free(list);
 		list = temp;

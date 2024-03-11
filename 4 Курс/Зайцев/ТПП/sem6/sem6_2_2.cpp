@@ -83,7 +83,7 @@ int main(int argc, char *argv[]) {
 		}
 #pragma omp parallel num_threads(4) // параллельная обработка элементов списка
 		{
-#pragma omp for schedule(dynamic,6)
+#pragma omp for schedule(dynamic, 6)
 			for (int i = 0; i < count; i++)
 			{
 				independent_work(arrd[i]);
@@ -94,7 +94,7 @@ int main(int argc, char *argv[]) {
 	list = head_list;
 	while (list != NULL)  // Вывод элементов списка и освобождение памяти
 	{
-		printf("%d : %d\n", list->number, list->fib_number);
+		printf("%d : %lu\n", list->number, list->fib_number);
 		temp = list->next;
 		free(list);
 		list = temp;

@@ -1,14 +1,16 @@
-// последовательная 
+
+// директива task
 
 #include <iostream>
 #include "omp.h"
+
 using namespace std;
+
 // Элемент списка
 struct node {
-	int number; // Любое целое число
-	unsigned long int fib_number; // Число Фибоначи 
-	struct node* next; // Указатель на следующий элемент списка
-//	node* next; // Указатель на следующий элемент списка
+	int number;
+	unsigned long int fib_number;
+	struct node* next;
 };
 
 // Рекурсивная функция вычисления n-го числа Фибоначи
@@ -39,18 +41,12 @@ struct node* init_list(int n)
 	struct node* head_list = NULL;
 	struct node* temp = NULL;
 
-	//node* list;
-	//node* head_list = NULL;
-	//node* temp = NULL; 
-
 	head_list = (struct node*)malloc(sizeof(struct node));
-	//head_list = new node();
 	list = head_list;
 	list->number = 10;
 	list->fib_number = 0;
-	for (int i = 1; i< n; i++) {
-	//	temp = (struct node*)malloc(sizeof(struct node));
-		temp = new node();
+	for (int i = 0; i < n; i++) {
+		temp = (struct node*)malloc(sizeof(struct node));
 		list->next = temp;
 		list = temp;
 		list->number = 10 + i;
@@ -60,33 +56,43 @@ struct node* init_list(int n)
 	return head_list;
 }
 
-int main(int argc, char *argv[]) {
-	struct node *list = NULL;
-	struct node *temp = NULL;
-	struct node *head_list = NULL;
+int main(int argc, char* argv[]) {
+	double start, end;
+	struct node* list = NULL;
+	struct node* temp = NULL;
+	struct node* head_list = NULL;
 	int count = 0;
-	const int n = 36; // Число элементов в списке
-	head_list = init_list(n); // Инициализация списка
-	
-	double time = omp_get_wtime();
-	list = head_list;
-	while (list != NULL)   // Основной цикл по выполнению действий над элементами списка
+	const int n = 36;
+
+	head_list = init_list(n);
+
+	start = omp_get_wtime();
+
+#pragma omp parallel  // параллельная обработка элементов списка  с использованием task
 	{
-		independent_work(list);
-		list = list->next;
+#pragma omp single nowait
+		{
+			list = head_list;
+			while (list) {
+#pragma omp task firstprivate(list)
+				{
+					independent_work(list);
+				}
+				list = list->next;
+			}
+		}
 	}
-	time = omp_get_wtime() - time;
-
-
+	end = omp_get_wtime();
 	list = head_list;
 	while (list != NULL)  // Вывод элементов списка и освобождение памяти
 	{
-		printf("%d : %d\n", list->number, list->fib_number);
+		printf("%d : %lu\n", list->number, list->fib_number);
 		temp = list->next;
 		free(list);
 		list = temp;
 	}
-	head_list = NULL;
+	free(list);
+	printf("Compute Time: %f seconds\n", end - start);
 
-	cout << "Time=" << time << endl;
+	return 0;
 }

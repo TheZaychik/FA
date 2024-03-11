@@ -18,3 +18,11 @@ compile and run as
 ```bash
 $ ocpp <file>.cpp && ./a.out   
 ```
+
+### Structure
+```bash
+Общие задания:
+sem<num>_<task>_<subtask(optional)>.cpp
+Задания для самостоятельного решения:
+sem<num>__<task>.cpp
+```
