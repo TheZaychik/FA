@@ -314,4 +314,6 @@ Backup of *.doc*
 *.zip
 .Rproj.user
 
-4 Курс/Зайцев/ТПП/a.out
+*a.out
+
+4 Курс/Зайцев/ТПП/.vscode/
