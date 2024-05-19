@@ -1,19 +1,22 @@
-'version': '3.8'
-name: 'ptpp_mpi4py'
+version: '3.8'
 services:
-  ptpp_mpi4py:
+  tpp_mpi4py:
     build:
       context: .
       dockerfile: .devcontainer/Dockerfile
     volumes:
-      - .:/home/user/proj
+      - .:/home/user/proj:cached
       - vscode-extensions:/home/user/.vscode-server/extensions
-    env_file:
-      - .env
     security_opt:
       - seccomp:unconfined
+    cap_add:
+      - SYS_PTRACE
+    env_file:
+      - .env
     command: /bin/sh -c "while sleep 1000; do :; done"
+
 
 volumes:
  vscode-extensions:
     external: true
+
