@@ -5,14 +5,14 @@ services:
       context: .
       dockerfile: .devcontainer/Dockerfile
     volumes:
-      - .:/home/user/proj:cached
-      - vscode-extensions:/home/user/.vscode-server/extensions
-    security_opt:
-      - seccomp:unconfined
-    cap_add:
-      - SYS_PTRACE
+      - .:/proj:cached
+      - vscode-extensions:/root/.vscode-server/extensions
     env_file:
       - .env
+    cap_add:
+      - SYS_PTRACE
+    security_opt:
+      - seccomp:unconfined
     command: /bin/sh -c "while sleep 1000; do :; done"
 
 
