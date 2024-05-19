@@ -11,7 +11,7 @@ rank = comm.Get_rank()
 numprocs = comm.Get_size()
 
 if rank == 0:
-    f1 = open("/home/user/proj/sem13/MPIMess/in.dat", "r")
+    f1 = open("in.dat", "r")
     N = array(int32(f1.readline()))
     M = array(int32(f1.readline()))
     f1.close()
