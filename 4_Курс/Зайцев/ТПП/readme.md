@@ -26,3 +26,8 @@ sem<num>_<task>_<subtask(optional)>.cpp
 Задания для самостоятельного решения:
 sem<num>__<task>.cpp
 ```
+
+run in container with (sem13+)
+```bash
+mpiexec -n 4 python3 <script>.py
+```

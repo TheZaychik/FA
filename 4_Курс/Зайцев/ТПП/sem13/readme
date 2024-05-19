@@ -1,2 +1,0 @@
-run in container with 
-mpiexec -n 4 python3 <script>.py 
