@@ -5,8 +5,8 @@ services:
       context: .
       dockerfile: .devcontainer/Dockerfile
     volumes:
-      - .:/proj:cached
-      - vscode-extensions:/root/.vscode-server/extensions
+      - .:/home/user/proj:cached
+      - vscode-extensions:/home/user/.vscode-server/extensions
     env_file:
       - .env
     cap_add:

@@ -8,6 +8,7 @@
     "service": "tpp_mpi4py",
     // The optional 'workspaceFolder' property is the path VS Code should open by default when
     // connected. This is typically a file mount in .devcontainer/docker-compose.yml
-    "workspaceFolder": "/proj",
+    "workspaceFolder": "/home/user/proj",
+    "remoteUser": "501:20",
     "shutdownAction": "stopCompose"
 }
