@@ -11,14 +11,14 @@ WORKDIR /home/user/proj
 RUN mkdir /home/user/.vscode-server
 RUN mkdir /home/user/.vscode-server/extensions
 
-RUN chown -R 501:20 /home/user/proj
-RUN chown -R 501:20 /home/user/.vscode-server
+RUN chown -R 501:20 /home/user/proj*
+RUN chown -R 501:20 /home/user/.vscode-server*
 
 VOLUME /home/user/.vscode-server/extensions
 VOLUME /home/user/proj
 USER 501:20
 
-COPY --chown=501:20 . /home/user/proj
+COPY --chown=501:20 .* /home/user/proj
 
 RUN pip3 install ipykernel pyopencl numba numpy==1.24.4
 
